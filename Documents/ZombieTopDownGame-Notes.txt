@@ -30,3 +30,13 @@ BP_TopDownController::EventTick:
 
 * FindLookAtRotation:
 * GetHitResultUnderCursorByChannel
+
+* RInterpToConstant 
+  * Use this to rotate at a constant rate 
+
+Stop player from rotating towards movement direction
+* Select BP_TownDownCharacter
+* Select the CharacterMovement Component
+* Details -> Character Movement: (Rotation Settings) -> Orient Rotation to Movement: FALSE
+  -> This ensures the player character doesnt face its direction movement
+  
