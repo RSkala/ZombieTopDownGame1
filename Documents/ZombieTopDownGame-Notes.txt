@@ -1,0 +1,24 @@
+
+Zombie Top Down Shooter Game
+
+--------------------------
+Source:
+https://www.unreal-university.com/courses/topdownshooter
+
+-----------------------------------
+Setting Up The Player Character
+
+* Using input in BP_TopDownController (as opposed to BP_TopDownCharacter)
+* EnhancedInputAction IA_Move: WASD
+  * Call AddMovementInput, use GetControlledPawn as Target
+  * GetControlledPawn
+  * Use ActionValue -> SplitStructPin ->
+    * ActionValueX -> Set Scale Value
+
+
+GetControlRotation:
+
+GetRightVector:
+* Returns the Right Vector (i.e. the Y axis) of the given Rotation
+
+-----------------------------------
