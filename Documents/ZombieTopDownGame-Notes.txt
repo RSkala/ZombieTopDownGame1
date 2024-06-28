@@ -39,4 +39,57 @@ Stop player from rotating towards movement direction
 * Select the CharacterMovement Component
 * Details -> Character Movement: (Rotation Settings) -> Orient Rotation to Movement: FALSE
   -> This ensures the player character doesnt face its direction movement
-  
+
+=====================================
+Setting up a custom character
+
+Mixamo
+* Can rig characters and use animations provided
+
+=====================================
+Blend Spaces
+
+* Can select specific animations depending on various values
+
+------------------------
+First, Import Character Rigs and Animations:
+
+Drag your rigged FBX character file (e.g. male.fbx) to the Content Browser.
+* The FBX Import Options dialog will appear
+
+FBX Import Options:
+* Mesh -> Advanced -> Normal Import Method: Select Import Normals
+* Click Import (NOT Import All, dont know difference)
+  * Note: Import All might be for multiple imported files
+
+
+Import the animations (FBX):
+(e.g. Pistol Idle.fbx, Pistol Run.fbx...)
+* When the FBX Import Options dialog appears, we need to ensure that Mesh -> Skeleton is the Skeleton we just imported (e.g. male_Skeleton)
+* UNCHECK Mesh -> Import Mesh, as we already imported the character's mesh when we imported its rig (e.g. male.fbx)
+
+
+BlendSpace:
+
+Create a Blend Space:
+* Content Browser -> Right-click -> Animation -> Blend Space
+  * You will then be prompted to select a Skeleton
+  * Select the Skeleton of the character you just imported (i.e. male_Skeleton)
+  * Name it BS_Something (BS = Blend Space)
+
+Edit the Blend Space:
+* Open the Blend Space
+* Axis Settings -> 
+  * Horizontal Axis
+    * Name: Direction
+    * Min Axis Value: -180
+    * Max Axis Value: 180
+  * Vertical Axis 
+    * Name: Speed
+    * Min Axis Value: 0 (default)
+    * Max Axis Value: 100 (default)
+
+In the Asset Browser section of the Blend Space, drag animations into the corners and center to customize, depending on the Axis Settings.
+Hold CTRL to preview the animation.
+
+=====================================
