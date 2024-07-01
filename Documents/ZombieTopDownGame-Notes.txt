@@ -93,3 +93,13 @@ In the Asset Browser section of the Blend Space, drag animations into the corner
 Hold CTRL to preview the animation.
 
 =====================================
+Animation Blueprint
+-----------------------------------
+
+Create an Animation Blueprint:
+* Content -> Right-click -> Animation -> Animation Blueprint
+  * Select the Skeleton
+  * Note: Default Parent Class is AnimInstance
+
+
+=====================================
